@@ -1,0 +1,11 @@
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 29254) running in data directory "/usr/local/var/postgres"?
+postgres cannot access the server configuration file "/usr/local/var/postgres/postgresql.conf": No such file or directory
+LOG:  database system was shut down at 2012-06-30 16:59:23 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "storylocus_development" does not exist
+FATAL:  database "storylocus_development" does not exist
+LOG:  statistics collector process (PID 29537) was terminated by signal 9: Killed
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 14809) running in data directory "/usr/local/var/postgres"?

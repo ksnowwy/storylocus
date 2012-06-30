@@ -8,10 +8,10 @@ describe "Static pages" do
       visit '/static_pages/home'
       page.should have_content('Storylocus')
     end
-    it "should have the right title" do
+    it "should have the base title" do
       visit '/static_pages/home'
       page.should have_selector('title',
-                        :text => "Storylocus | Home")
+                        :text => "Storylocus")
     end
   end
   describe "About page" do
