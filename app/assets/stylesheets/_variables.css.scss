@@ -23,3 +23,12 @@ $invalid-background-color: #f0dddd;
 
 $darkGray: #262626;
 $lightGray: #D9D9D9;
+
+
+/* === APP MIXINS === */
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
