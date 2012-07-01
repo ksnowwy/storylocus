@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <header class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-          <%= link_to "storylocus", '#', id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Sign up", '#' %></li>
-			  <li><%= link_to "Log in", '#' %></li>
-            </ul>
-          </nav>
-      </div>
-    </header>
-    <div class="container">
+<%# http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither %>
+<%= html_tag :class => "no-js", :lang => "en" %>
+  <%= render "head" %>
+
+  <body class="pages">
+    <%= render "chromeframe" %>
+    <%= render "header" %>
+	<%= render "secondmenu" %>
+
+    <div id="main" role="main">
+      <%= render "flashes" %>
       <%= yield %>
     </div>
+
+    <%= render "footer" %>
+
+    <%# Javascript at the bottom for fast page loading %>
+    <%= render "javascripts" %>
   </body>
 </html>
