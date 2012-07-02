@@ -4,8 +4,13 @@
 	  <nav class="navbar-right">
 		<ul>
 			<li class="app-link"><%= link_to "Get the app",    '#' %></li>
+			<% if signed_in? %>
+			<li><%= link_to "Profile", current_user %></li>
+			<li><%= link_to "Map a story", "#" %>
+			<% else %>
 			<li><%= link_to "Sign up",    signup_path %></li>
-			<li><%= link_to "Log in",    '#' %></li>
+			<li><%= link_to "Log in",    signin_path %></li>
+			<% end %>
 		</ul>
 	  </nav>
 	</div>
